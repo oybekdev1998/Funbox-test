@@ -8,14 +8,32 @@
 .App {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-05) 49.88%, rgba(0, 0, 0, 0.5) 100%);
   background-image: url('./assets/background.png');
-  height: 100vh;
-  overflow-y: hidden;
-  z-index: 10;
+  height: 100%;
 }
 .content {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+@media screen and (max-width: 764px){
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    margin-top: 0px;
+    
+  }
+}
+
+@media screen and (max-width: 1135px){
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
 }
 
 .title {
@@ -24,7 +42,7 @@
   line-height: 44px;
   text-align: center;
   font-weight: 400;
-  margin-top: 36px;
+  padding-top: 25px;
   color: #FFFFFF;
   text-shadow: 0px 1px 1px #000000;
 }
